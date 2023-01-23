@@ -1,0 +1,22 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h4>Welcome, enter a number to get started</h4>
+    <div>
+        <form method="post">
+            Number: <input name="number" type="number" />
+            <button type="submit">Submit</button>
+        </form>
+
+        @if (@ViewBag.Result != null)
+        {
+            <div>
+                Result: @ViewBag.Result
+            </div>
+        }
+    </div>
+</div>
